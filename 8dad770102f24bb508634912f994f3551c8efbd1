@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "fa2559ec_b0da80e7",
+        "filename": "openstack-magnum-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-06-30T06:59:02Z",
+      "side": 1,
+      "message": "Why is this workaround needed?",
+      "revId": "8dad770102f24bb508634912f994f3551c8efbd1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa2559ec_b0d0c0f8",
         "filename": "openstack-magnum-ui.spec",
         "patchSetId": 2
@@ -30,6 +47,23 @@
       "writtenOn": "2016-06-29T17:10:45Z",
       "side": 1,
       "message": "these lines are causing the build failure: install -p -D -m 640 enabled/_50_project_containers_panelgroup.py /builddir/build/BUILDROOT/openstack-magnum-ui-1.0.1-0.20160611161431.6709887.el7.centos.x86_64/usr/share/openstack-dashboard/openstack_dashboard/local/enabled/_50_project_containers_panelgroup.py\nDEBUG: install: cannot stat \u0027enabled/_50_project_containers_panelgroup.py\u0027: No such file or directory",
+      "revId": "8dad770102f24bb508634912f994f3551c8efbd1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_90d77cbf",
+        "filename": "openstack-magnum-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-06-30T06:59:02Z",
+      "side": 1,
+      "message": "%changelog is empty on rpm-master to enable clean cherry-picks to per-release distgit branches, RELEASE-rdo",
       "revId": "8dad770102f24bb508634912f994f3551c8efbd1",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
