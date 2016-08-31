@@ -55,9 +55,9 @@ rm -rf html/.{doctrees,buildinfo}
 %{__python2} setup.py install --skip-build --root %{buildroot}
 
 # Move config to horizon
-install -p -D -m 640 %{module}/enabled/_1370_project_container-infra_panelgroup.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1370_project_container-infra_panelgroup.py
-install -p -D -m 640 %{module}/enabled/_1371_project_container-infra_bays_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1371_project_container-infra_bays_panel.py
-install -p -D -m 640 %{module}/enabled/_1372_project_container-infra_baymodels_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1372_project_container-infra_baymodels_panel.py
+install -p -D -m 640 %{module}/enabled/_1370_project_container_infra_panel_group.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1370_project_container_infra_panel_group.py
+install -p -D -m 640 %{module}/enabled/_1371_project_container_infra_clusters_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1371_project_container_infra_clusters_panel.py
+install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_templates_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1372_project_container_infra_cluster_templates_panel.py
 
 
 %files
