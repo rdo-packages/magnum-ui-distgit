@@ -55,16 +55,17 @@ rm -rf html/.{doctrees,buildinfo}
 %{__python2} setup.py install --skip-build --root %{buildroot}
 
 # Move config to horizon
-install -p -D -m 640 %{module}/enabled/_1370_project_container-infra_panelgroup.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1370_project_container-infra_panelgroup.py
-install -p -D -m 640 %{module}/enabled/_1371_project_container-infra_bays_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1371_project_container-infra_bays_panel.py
-install -p -D -m 640 %{module}/enabled/_1372_project_container-infra_baymodels_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1372_project_container-infra_baymodels_panel.py
+install -p -D -m 640 enabled/_50_project_containers_panelgroup.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_50_project_containers_panelgroup.py
+install -p -D -m 640 enabled/_51_project_containers_bays_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_51_project_containers_bays_panel.py
+install -p -D -m 640 enabled/_52_project_containers_baymodels_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_52_project_containers_baymodels_panel.py
+install -p -D -m 640 enabled/_53_project_containers_containers_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_53_project_containers_containers_panel.py
 
 
 %files
 %license LICENSE
 %{python2_sitelib}/%{module}
 %{python2_sitelib}/*.egg-info
-%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_137*
+%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_5*
 
 %files -n python-%{library}-doc
 %license LICENSE
