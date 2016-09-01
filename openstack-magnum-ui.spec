@@ -4,8 +4,8 @@
 %global module magnum_ui
 
 Name:       openstack-%{library}
-Version:    1.0.0
-Release:    1%{?dist}
+Version:    XXX
+Release:    XXX
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{library}/
@@ -73,5 +73,3 @@ install -p -D -m 640 enabled/_53_project_containers_containers_panel.py %{buildr
 
 
 %changelog
-* Wed Aug 31 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 1.0.0-1
-- Upstream 1.0.0
