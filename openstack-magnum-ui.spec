@@ -19,8 +19,13 @@ BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
 BuildRequires:  git
 
-Requires:   python2-magnumclient >= 0.2.1
+Requires:   python-magnumclient >= 2.0.0
 Requires:   openstack-dashboard >= 8.0.0
+Requires:   python-django >= 1.8
+Requires:   python-django-babel
+Requires:   python-django-compressor >= 2.0
+Requires:   python-django-openstack-auth >= 3.1.0
+Requires:   python-django-pyscss >= 2.0.2
 
 %description
 OpenStack Magnum UI Horizon plugin
