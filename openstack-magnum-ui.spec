@@ -4,8 +4,8 @@
 %global module magnum_ui
 
 Name:       openstack-%{library}
-Version:    XXX
-Release:    XXX
+Version:    2.2.0
+Release:    1%{?dist}
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{library}/
@@ -77,3 +77,6 @@ install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
+* Wed Feb 15 2017 Alfredo Moralejo <amoralej@redhat.com> 2.2.0-1
+- Update to 2.2.0
+
