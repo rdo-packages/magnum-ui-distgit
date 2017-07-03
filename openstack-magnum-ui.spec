@@ -35,7 +35,13 @@ OpenStack Magnum UI Horizon plugin
 Summary:    OpenStack example library documentation
 
 BuildRequires: python-sphinx
-BuildRequires: python-oslo-sphinx
+BuildRequires: python-django
+BuildRequires: python-django-nose
+BuildRequires: openstack-dashboard
+BuildRequires: python-openstackdocstheme
+BuildRequires: python-magnumclient
+BuildRequires: python-mock
+BuildRequires: python-mox3
 
 %description -n python-%{library}-doc
 OpenStack Magnum UI Horizon plugin documentation
@@ -52,9 +58,10 @@ rm -f *requirements.txt
 %{__python2} setup.py build
 
 # generate html docs
-sphinx-build doc/source html
+export PYTHONPATH=/usr/share/openstack-dashboard
+%{__python2} setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
-rm -rf html/.{doctrees,buildinfo}
+rm -rf doc/build/html/.{doctrees,buildinfo}
 
 %install
 %{__python2} setup.py install --skip-build --root %{buildroot}
@@ -73,7 +80,7 @@ install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 %files -n python-%{library}-doc
 %license LICENSE
-%doc html README.rst
+%doc doc/build/html README.rst
 
 
 %changelog
