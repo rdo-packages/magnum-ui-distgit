@@ -58,7 +58,6 @@ rm -f *requirements.txt
 %{__python2} setup.py build
 
 # generate html docs
-export PYTHONPATH=/usr/share/openstack-dashboard
 %{__python2} setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
