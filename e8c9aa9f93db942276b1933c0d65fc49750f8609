@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a890539_c7cda25f",
+        "filename": "openstack-magnum-ui.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-08-07T15:07:24Z",
+      "side": 0,
+      "message": "In this case we need to set PYTHONPATH as the location of openstack_dashboard module is not standard site-packages.",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 48
+      },
+      "revId": "e8c9aa9f93db942276b1933c0d65fc49750f8609",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
