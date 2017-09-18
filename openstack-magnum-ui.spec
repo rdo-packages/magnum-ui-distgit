@@ -44,6 +44,7 @@ BuildRequires: python-openstackdocstheme
 BuildRequires: python-magnumclient
 BuildRequires: python-mock
 BuildRequires: python-mox3
+BuildRequires: openstack-macros
 
 %description -n python-%{library}-doc
 OpenStack Magnum UI Horizon plugin documentation
@@ -53,7 +54,7 @@ This package contains the documentation.
 %prep
 %autosetup -n %{library}-%{upstream_version} -S git
 # Let's handle dependencies ourseleves
-rm -f *requirements.txt
+%py_req_cleanup
 
 
 %build
