@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa81d914_04c16a2e",
+        "filename": "openstack-magnum-ui.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 424
+      },
+      "writtenOn": "2017-10-03T09:20:07Z",
+      "side": 1,
+      "message": "I think the best description is:\n\nOpenStack Magnum Horizon plugin",
+      "revId": "1b58216df3d52c3f771f483552d2120fe627754f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_e4c37636",
+        "filename": "openstack-magnum-ui.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 424
+      },
+      "writtenOn": "2017-10-03T09:20:07Z",
+      "side": 1,
+      "message": "this line should go, not required",
+      "revId": "1b58216df3d52c3f771f483552d2120fe627754f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_c4c67249",
+        "filename": "openstack-magnum-ui.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 424
+      },
+      "writtenOn": "2017-10-03T09:20:07Z",
+      "side": 1,
+      "message": "no, this is should not be here",
+      "revId": "1b58216df3d52c3f771f483552d2120fe627754f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
