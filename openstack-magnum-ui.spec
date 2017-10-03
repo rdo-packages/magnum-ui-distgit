@@ -3,6 +3,9 @@
 %global library magnum-ui
 %global module magnum_ui
 
+%global common_desc \
+OpenStack Magnum Horizon plugin
+
 Name:       openstack-%{library}
 Version:    XXX
 Release:    XXX
@@ -30,9 +33,8 @@ Requires:   python-django-openstack-auth >= 3.5.0
 Requires:   python-django-pyscss >= 2.0.2
 
 %description
-OpenStack Magnum UI Horizon plugin
+%{common_desc}
 
-# Documentation package
 %package -n python-%{library}-doc
 Summary:    OpenStack example library documentation
 
@@ -47,7 +49,7 @@ BuildRequires: python-mox3
 BuildRequires: openstack-macros
 
 %description -n python-%{library}-doc
-OpenStack Magnum UI Horizon plugin documentation
+%{common_desc}
 
 This package contains the documentation.
 
