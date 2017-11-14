@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da86d52c_a31fb608",
+        "filename": "openstack-magnum-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-11-14T16:37:44Z",
+      "side": 1,
+      "message": "Interestingly this UI plugin doesn\u0027t BR openstack-dashboard, so others *-ui which have it as BR are wrong?",
+      "revId": "147eb0b7b0c0a18a2da01ac4ed779bc33f69152f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
