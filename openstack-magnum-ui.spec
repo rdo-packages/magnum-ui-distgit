@@ -22,11 +22,10 @@ BuildRequires:  git
 Requires:   python-pbr
 Requires:   python-babel
 Requires:   python-magnumclient >= 2.0.0
-Requires:   openstack-dashboard >= 8.0.0
+Requires:   openstack-dashboard >= 1:8.0.0
 Requires:   python-django >= 1.8
 Requires:   python-django-babel
 Requires:   python-django-compressor >= 2.0
-Requires:   python-django-openstack-auth >= 3.5.0
 Requires:   python-django-pyscss >= 2.0.2
 
 %description
