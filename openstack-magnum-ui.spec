@@ -18,18 +18,18 @@ Source0:    https://tarballs.openstack.org/%{library}/%{library}-%{upstream_vers
 BuildArch:  noarch
 
 BuildRequires:  python2-devel
-BuildRequires:  python-pbr
-BuildRequires:  python-setuptools
+BuildRequires:  python2-pbr
+BuildRequires:  python2-setuptools
 BuildRequires:  git
 
-Requires:   python-pbr
-Requires:   python-babel
-Requires:   python-magnumclient >= 2.0.0
+Requires:   python2-pbr
+Requires:   python2-babel
+Requires:   python2-magnumclient >= 2.1.0
 Requires:   openstack-dashboard >= 1:8.0.0
-Requires:   python-django >= 1.8
-Requires:   python-django-babel
-Requires:   python-django-compressor >= 2.0
-Requires:   python-django-pyscss >= 2.0.2
+Requires:   python2-django >= 1.8
+Requires:   python2-django-babel
+Requires:   python2-django-compressor >= 2.0
+Requires:   python2-django-pyscss >= 2.0.2
 
 %description
 %{common_desc}
@@ -37,14 +37,14 @@ Requires:   python-django-pyscss >= 2.0.2
 %package -n python-%{library}-doc
 Summary:    OpenStack example library documentation
 
-BuildRequires: python-sphinx
-BuildRequires: python-django
-BuildRequires: python-django-nose
+BuildRequires: python2-sphinx
+BuildRequires: python2-django
+BuildRequires: python2-django-nose
 BuildRequires: openstack-dashboard
-BuildRequires: python-openstackdocstheme
-BuildRequires: python-magnumclient
-BuildRequires: python-mock
-BuildRequires: python-mox3
+BuildRequires: python2-openstackdocstheme
+BuildRequires: python2-magnumclient
+BuildRequires: python2-mock
+BuildRequires: python2-mox3
 BuildRequires: openstack-macros
 
 %description -n python-%{library}-doc
