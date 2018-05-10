@@ -42,6 +42,7 @@ BuildRequires: python2-django
 BuildRequires: python2-django-nose
 BuildRequires: openstack-dashboard
 BuildRequires: python2-openstackdocstheme
+BuildRequires: python2-sphinxcontrib-apidoc
 BuildRequires: python2-magnumclient
 BuildRequires: python2-mock
 BuildRequires: python2-mox3
@@ -63,7 +64,7 @@ This package contains the documentation.
 
 # generate html docs
 export PYTHONPATH=/usr/share/openstack-dashboard
-%{__python2} setup.py build_sphinx -b html
+sphinx-build -W -b html doc/source doc/build/html
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 
