@@ -75,7 +75,7 @@ This package contains the documentation.
 %{pyver_build}
 
 # generate html docs
-export PYTHONPATH=/usr/share/openstack-dashboard
+export PYTHONPATH=.:/usr/share/openstack-dashboard
 sphinx-build-%{pyver} -W -b html doc/source doc/build/html
 # remove the sphinx-build-%{pyver} leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
