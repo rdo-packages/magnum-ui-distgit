@@ -35,8 +35,8 @@ BuildRequires:  git
 
 Requires:   python%{pyver}-pbr
 Requires:   python%{pyver}-babel
-Requires:   python%{pyver}-magnumclient >= 2.6.0
-Requires:   openstack-dashboard >= 1:13.0.0
+Requires:   python%{pyver}-magnumclient >= 2.11.0
+Requires:   openstack-dashboard >= 1:15.0.0
 Requires:   python%{pyver}-django >= 1.11
 Requires:   python%{pyver}-django-babel
 Requires:   python%{pyver}-django-compressor >= 2.0
