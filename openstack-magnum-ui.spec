@@ -4,7 +4,7 @@
 %global module magnum_ui
 
 Name:       openstack-%{library}
-Version:    3.0.0
+Version:    3.0.1
 Release:    1%{?dist}
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    ASL 2.0
@@ -86,6 +86,9 @@ install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
+* Tue Apr 16 2019 RDO <dev@lists.rdoproject.org> 3.0.1-1
+- Update to 3.0.1
+
 * Thu Aug 24 2017 Alfredo Moralejo <amoralej@redhat.com> 3.0.0-1
 - Update to 3.0.0
 
