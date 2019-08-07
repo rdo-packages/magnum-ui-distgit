@@ -13,6 +13,7 @@
 
 %global library magnum-ui
 %global module magnum_ui
+%global with_doc 1
 
 %global common_desc \
 OpenStack Magnum Horizon plugin
@@ -32,6 +33,7 @@ BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-pbr
 BuildRequires:  python%{pyver}-setuptools
 BuildRequires:  git
+BuildRequires:  openstack-macros
 
 Requires:   python%{pyver}-pbr
 Requires:   python%{pyver}-babel
@@ -45,6 +47,7 @@ Requires:   python%{pyver}-django-pyscss >= 2.0.2
 %description
 %{common_desc}
 
+%if 0%{?with_doc}
 %package -n python%{pyver}-%{library}-doc
 Summary:    OpenStack example library documentation
 %{?python_provide:%python_provide python%{pyver}-%{library}-doc}
@@ -58,12 +61,12 @@ BuildRequires: python%{pyver}-sphinxcontrib-apidoc
 BuildRequires: python%{pyver}-magnumclient
 BuildRequires: python%{pyver}-mock
 BuildRequires: python%{pyver}-mox3
-BuildRequires: openstack-macros
 
 %description -n python%{pyver}-%{library}-doc
 %{common_desc}
 
 This package contains the documentation.
+%endif
 
 %prep
 %autosetup -n %{library}-%{upstream_version} -S git
@@ -74,11 +77,13 @@ This package contains the documentation.
 %build
 %{pyver_build}
 
+%if 0%{?with_doc}
 # generate html docs
 export PYTHONPATH=.:/usr/share/openstack-dashboard
 sphinx-build-%{pyver} -W -b html doc/source doc/build/html
 # remove the sphinx-build-%{pyver} leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
+%endif
 
 %install
 %{pyver_install}
@@ -95,9 +100,11 @@ install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_tem
 %{pyver_sitelib}/*.egg-info
 %{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_137*
 
+%if 0%{?with_doc}
 %files -n python%{pyver}-%{library}-doc
 %license LICENSE
 %doc doc/build/html README.rst
+%endif
 
 
 %changelog
