@@ -37,7 +37,8 @@ BuildRequires:  openstack-macros
 
 Requires:   python%{pyver}-pbr
 Requires:   python%{pyver}-babel
-Requires:   python%{pyver}-magnumclient >= 2.11.0
+Requires:   python%{pyver}-heatclient >= 1.18.0
+Requires:   python%{pyver}-magnumclient >= 2.15.0
 Requires:   openstack-dashboard >= 1:15.0.0
 Requires:   python%{pyver}-django >= 1.11
 Requires:   python%{pyver}-django-babel
@@ -59,6 +60,7 @@ BuildRequires: openstack-dashboard
 BuildRequires: python%{pyver}-openstackdocstheme
 BuildRequires: python%{pyver}-sphinxcontrib-apidoc
 BuildRequires: python%{pyver}-magnumclient
+BuildRequires: python%{pyver}-heatclient
 BuildRequires: python%{pyver}-mock
 BuildRequires: python%{pyver}-mox3
 
