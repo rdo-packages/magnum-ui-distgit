@@ -19,7 +19,7 @@
 OpenStack Magnum Horizon plugin
 
 Name:       openstack-%{library}
-Version:    5.2.1
+Version:    5.3.0
 Release:    1%{?dist}
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    ASL 2.0
@@ -110,6 +110,9 @@ install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
+* Tue Apr 14 2020 RDO <dev@lists.rdoproject.org> 5.3.0-1
+- Update to 5.3.0
+
 * Fri Nov 29 2019 RDO <dev@lists.rdoproject.org> 5.2.1-1
 - Update to 5.2.1
 
