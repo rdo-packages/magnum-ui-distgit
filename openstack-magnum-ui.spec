@@ -34,7 +34,14 @@ BuildRequires:  python%{pyver}-pbr
 BuildRequires:  python%{pyver}-setuptools
 BuildRequires:  git
 BuildRequires:  openstack-macros
-
+BuildRequires:  python%{pyver}-django
+BuildRequires:  python%{pyver}-django-nose
+BuildRequires:  openstack-dashboard
+BuildRequires:  python%{pyver}-magnumclient
+BuildRequires:  python%{pyver}-heatclient
+BuildRequires:  python%{pyver}-mock
+BuildRequires:  python%{pyver}-mox3
+BuildRequires:  python%{pyver}-pytest
 Requires:   python%{pyver}-pbr
 Requires:   python%{pyver}-babel
 Requires:   python%{pyver}-heatclient >= 1.18.0
@@ -52,17 +59,9 @@ Requires:   python%{pyver}-django-pyscss >= 2.0.2
 %package -n python%{pyver}-%{library}-doc
 Summary:    OpenStack example library documentation
 %{?python_provide:%python_provide python%{pyver}-%{library}-doc}
-
 BuildRequires: python%{pyver}-sphinx
-BuildRequires: python%{pyver}-django
-BuildRequires: python%{pyver}-django-nose
-BuildRequires: openstack-dashboard
 BuildRequires: python%{pyver}-openstackdocstheme
 BuildRequires: python%{pyver}-sphinxcontrib-apidoc
-BuildRequires: python%{pyver}-magnumclient
-BuildRequires: python%{pyver}-heatclient
-BuildRequires: python%{pyver}-mock
-BuildRequires: python%{pyver}-mox3
 
 %description -n python%{pyver}-%{library}-doc
 %{common_desc}
