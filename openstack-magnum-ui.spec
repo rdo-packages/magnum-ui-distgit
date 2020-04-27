@@ -1,14 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global library magnum-ui
@@ -29,41 +18,40 @@ Source0:    https://tarballs.openstack.org/%{library}/%{library}-%{upstream_vers
 
 BuildArch:  noarch
 
-BuildRequires:  python%{pyver}-devel
-BuildRequires:  python%{pyver}-pbr
-BuildRequires:  python%{pyver}-setuptools
+BuildRequires:  python3-devel
+BuildRequires:  python3-pbr
+BuildRequires:  python3-setuptools
 BuildRequires:  git
 BuildRequires:  openstack-macros
-BuildRequires:  python%{pyver}-django
-BuildRequires:  python%{pyver}-django-nose
+BuildRequires:  python3-django
+BuildRequires:  python3-django-nose
 BuildRequires:  openstack-dashboard
-BuildRequires:  python%{pyver}-magnumclient
-BuildRequires:  python%{pyver}-heatclient
-BuildRequires:  python%{pyver}-mock
-BuildRequires:  python%{pyver}-mox3
-BuildRequires:  python%{pyver}-pytest
-Requires:   python%{pyver}-pbr
-Requires:   python%{pyver}-babel
-Requires:   python%{pyver}-heatclient >= 1.18.0
-Requires:   python%{pyver}-magnumclient >= 2.15.0
-Requires:   openstack-dashboard >= 1:15.0.0
-Requires:   python%{pyver}-django >= 1.11
-Requires:   python%{pyver}-django-babel
-Requires:   python%{pyver}-django-compressor >= 2.0
-Requires:   python%{pyver}-django-pyscss >= 2.0.2
+BuildRequires:  python3-magnumclient
+BuildRequires:  python3-heatclient
+BuildRequires:  python3-mock
+BuildRequires:  python3-mox3
+BuildRequires:  python3-pytest
+Requires:   python3-pbr
+Requires:   python3-heatclient >= 1.18.0
+Requires:   python3-magnumclient >= 2.15.0
+Requires:   python3-django >= 1.11
+Requires:   python3-django-babel
+Requires:   python3-django-compressor >= 2.0
+Requires:   python3-django-pyscss >= 2.0.2
+Requires:   openstack-dashboard >= 1:17.1.0
 
 %description
 %{common_desc}
 
 %if 0%{?with_doc}
-%package -n python%{pyver}-%{library}-doc
+%package -n python3-%{library}-doc
 Summary:    OpenStack example library documentation
-%{?python_provide:%python_provide python%{pyver}-%{library}-doc}
-BuildRequires: python%{pyver}-sphinx
-BuildRequires: python%{pyver}-openstackdocstheme
-BuildRequires: python%{pyver}-sphinxcontrib-apidoc
+%{?python_provide:%python_provide python3-%{library}-doc}
+BuildRequires: python3-sphinx
+BuildRequires: python3-openstackdocstheme
+BuildRequires: python3-sphinxcontrib-apidoc
 
-%description -n python%{pyver}-%{library}-doc
+%description -n python3-%{library}-doc
 %{common_desc}
 
 This package contains the documentation.
@@ -76,18 +64,18 @@ This package contains the documentation.
 
 
 %build
-%{pyver_build}
+%{py3_build}
 
 %if 0%{?with_doc}
 # generate html docs
 export PYTHONPATH=.:/usr/share/openstack-dashboard
-sphinx-build-%{pyver} -W -b html doc/source doc/build/html
-# remove the sphinx-build-%{pyver} leftovers
+sphinx-build -W -b html doc/source doc/build/html
+# remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %install
-%{pyver_install}
+%{py3_install}
 
 # Move config to horizon
 install -p -D -m 640 %{module}/enabled/_1370_project_container_infra_panel_group.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1370_project_container_infra_panel_group.py
@@ -97,12 +85,12 @@ install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 %files
 %license LICENSE
-%{pyver_sitelib}/%{module}
-%{pyver_sitelib}/*.egg-info
+%{python3_sitelib}/%{module}
+%{python3_sitelib}/*.egg-info
 %{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_137*
 
 %if 0%{?with_doc}
-%files -n python%{pyver}-%{library}-doc
+%files -n python3-%{library}-doc
 %license LICENSE
 %doc doc/build/html README.rst
 %endif
