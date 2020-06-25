@@ -9,7 +9,7 @@ OpenStack Magnum Horizon plugin
 
 Name:       openstack-%{library}
 Version:    6.0.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{library}/
@@ -78,9 +78,9 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %{py3_install}
 
 # Move config to horizon
-install -p -D -m 640 %{module}/enabled/_1370_project_container_infra_panel_group.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1370_project_container_infra_panel_group.py
-install -p -D -m 640 %{module}/enabled/_1371_project_container_infra_clusters_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1371_project_container_infra_clusters_panel.py
-install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_templates_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1372_project_container_infra_cluster_templates_panel.py
+install -p -D -m 644 %{module}/enabled/_1370_project_container_infra_panel_group.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1370_project_container_infra_panel_group.py
+install -p -D -m 644 %{module}/enabled/_1371_project_container_infra_clusters_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1371_project_container_infra_clusters_panel.py
+install -p -D -m 644 %{module}/enabled/_1372_project_container_infra_cluster_templates_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1372_project_container_infra_cluster_templates_panel.py
 
 
 %files
@@ -97,6 +97,8 @@ install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
+* Thu Jun 25 2020 Tobias Urdin <tobias.urdin@binero.com> 6.0.0-2
+- Fixed horizon enabled files having wrong mode.
+
 * Wed May 06 2020 RDO <dev@lists.rdoproject.org> 6.0.0-1
 - Update to 6.0.0
-
