@@ -20,7 +20,7 @@ OpenStack Magnum Horizon plugin
 
 Name:       openstack-%{library}
 Version:    5.3.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{library}/
@@ -91,9 +91,9 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %{pyver_install}
 
 # Move config to horizon
-install -p -D -m 640 %{module}/enabled/_1370_project_container_infra_panel_group.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1370_project_container_infra_panel_group.py
-install -p -D -m 640 %{module}/enabled/_1371_project_container_infra_clusters_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1371_project_container_infra_clusters_panel.py
-install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_templates_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1372_project_container_infra_cluster_templates_panel.py
+install -p -D -m 644 %{module}/enabled/_1370_project_container_infra_panel_group.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1370_project_container_infra_panel_group.py
+install -p -D -m 644 %{module}/enabled/_1371_project_container_infra_clusters_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1371_project_container_infra_clusters_panel.py
+install -p -D -m 644 %{module}/enabled/_1372_project_container_infra_cluster_templates_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1372_project_container_infra_cluster_templates_panel.py
 
 
 %files
@@ -110,6 +110,9 @@ install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
+* Thu Jun 25 2020 Tobias Urdin <tobias.urdin@binero.com> 5.3.0-2
+- Fixed horizon enabled files having wrong mode.
+
 * Tue Apr 14 2020 RDO <dev@lists.rdoproject.org> 5.3.0-1
 - Update to 5.3.0
 
@@ -118,4 +121,3 @@ install -p -D -m 640 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 * Mon Sep 30 2019 RDO <dev@lists.rdoproject.org> 5.2.0-1
 - Update to 5.2.0
-
