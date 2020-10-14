@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -12,7 +11,7 @@ OpenStack Magnum Horizon plugin
 
 Name:       openstack-%{library}
 Version:    7.0.0
-Release:    0.1%{?milestone}%{?dist}
+Release:    1%{?dist}
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{library}/
@@ -24,8 +23,6 @@ Source101:        https://tarballs.openstack.org/%{library}/%{library}-%{upstrea
 Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
-#
-# patches_base=7.0.0.0rc1
 #
 
 BuildArch:  noarch
@@ -116,7 +113,8 @@ install -p -D -m 644 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
-* Wed Oct 14 2020 Joel Capitao <jcapitao@redhat.com> 7.0.0-0.1.0rc1
+* Wed Oct 14 2020 RDO <dev@lists.rdoproject.org> 7.0.0-1
+- Update to 7.0.0
 - Enable sources tarball validation using GPG signature.
 
 * Thu Sep 24 2020 RDO <dev@lists.rdoproject.org> 7.0.0-0.1.0rc1
