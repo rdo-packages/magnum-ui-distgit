@@ -11,7 +11,7 @@ OpenStack Magnum Horizon plugin
 
 Name:       openstack-%{library}
 Version:    7.0.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{library}/
@@ -47,7 +47,7 @@ BuildRequires:  python3-mox3
 BuildRequires:  python3-pytest
 Requires:   python3-pbr
 Requires:   python3-heatclient >= 1.18.0
-Requires:   python3-magnumclient >= 2.15.0
+Requires:   python3-magnumclient >= 3.1.0
 Requires:   python3-django-babel
 Requires:   python3-django-pyscss >= 2.0.2
 Requires:   openstack-dashboard >= 1:17.1.0
@@ -113,6 +113,9 @@ install -p -D -m 644 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
+* Thu Apr 22 2021 Tobias Urdin <tobias.urdin@binero.com> 7.0.0-2
+- Update python3-magnumclient requires >= 3.1.0
+
 * Wed Oct 14 2020 RDO <dev@lists.rdoproject.org> 7.0.0-1
 - Update to 7.0.0
 - Enable sources tarball validation using GPG signature.
