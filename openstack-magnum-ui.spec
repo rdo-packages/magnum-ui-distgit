@@ -48,7 +48,6 @@ BuildRequires:  python3-pytest
 Requires:   python3-pbr
 Requires:   python3-heatclient >= 1.18.0
 Requires:   python3-magnumclient >= 2.15.0
-Requires:   python3-django-babel
 Requires:   python3-django-pyscss >= 2.0.2
 Requires:   openstack-dashboard >= 1:17.1.0
 
