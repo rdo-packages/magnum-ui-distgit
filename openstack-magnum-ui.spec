@@ -8,8 +8,8 @@
 OpenStack Magnum Horizon plugin
 
 Name:       openstack-%{library}
-Version:    6.0.0
-Release:    2%{?dist}
+Version:    6.0.1
+Release:    1%{?dist}
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{library}/
@@ -97,6 +97,9 @@ install -p -D -m 644 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
+* Thu Jul 29 2021 RDO <dev@lists.rdoproject.org> 6.0.1-1
+- Update to 6.0.1
+
 * Thu Jun 25 2020 Tobias Urdin <tobias.urdin@binero.com> 6.0.0-2
 - Fixed horizon enabled files having wrong mode.
 
