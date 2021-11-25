@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
+%global sources_gpg_sign 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global library magnum-ui
@@ -10,7 +10,7 @@
 OpenStack Magnum Horizon plugin
 
 Name:       openstack-%{library}
-Version:    8.0.0
+Version:    8.0.1
 Release:    1%{?dist}
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    ASL 2.0
@@ -113,6 +113,9 @@ install -p -D -m 644 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
+* Thu Nov 25 2021 RDO <dev@lists.rdoproject.org> 8.0.1-1
+- Update to 8.0.1
+
 * Wed Apr 14 2021 RDO <dev@lists.rdoproject.org> 8.0.0-1
 - Update to 8.0.0
 
