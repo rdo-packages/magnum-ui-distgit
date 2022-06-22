@@ -41,7 +41,6 @@ BuildRequires:  openstack-dashboard
 BuildRequires:  python3-magnumclient
 BuildRequires:  python3-heatclient
 BuildRequires:  python3-mock
-BuildRequires:  python3-mox3
 BuildRequires:  python3-pytest
 Requires:   python3-pbr
 Requires:   python3-heatclient >= 1.18.0
