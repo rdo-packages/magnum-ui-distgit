@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -18,14 +17,12 @@ OpenStack Magnum Horizon plugin
 
 Name:       openstack-%{library}
 Version:    13.0.0
-Release:    0.1%{?milestone}%{?dist}
+Release:    1%{?dist}
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    Apache-2.0
 URL:        http://launchpad.net/%{library}/
 
 Source0:    https://tarballs.openstack.org/%{library}/%{library}-%{upstream_version}.tar.gz
-#
-# patches_base=13.0.0.0rc1
 #
 
 # Required for tarball sources verification
@@ -124,6 +121,9 @@ install -p -D -m 644 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
+* Wed Oct 04 2023 RDO <dev@lists.rdoproject.org> 13.0.0-1
+- Update to 13.0.0
+
 * Fri Sep 15 2023 RDO <dev@lists.rdoproject.org> 13.0.0-0.1.0rc1
 - Update to 13.0.0.0rc1
 
