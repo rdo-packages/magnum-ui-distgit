@@ -121,3 +121,4 @@ install -p -D -m 644 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/magnum-ui/commit/7721a5f16860e6b3df29999d3859271c5b8c9ebe
