@@ -129,3 +129,4 @@ install -p -D -m 644 %{module}/enabled/_1372_project_container_infra_cluster_tem
 * Tue Mar 18 2025 RDO <dev@lists.rdoproject.org> 16.0.0-0.1.0rc1
 - Update to 16.0.0.0rc1
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/magnum-ui/commit/37e79129e069a609ed766294438b54f777196949
