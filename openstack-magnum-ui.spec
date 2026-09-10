@@ -18,7 +18,7 @@
 OpenStack Magnum Horizon plugin
 
 Name:       openstack-%{library}
-Version:    16.0.0
+Version:    16.1.0
 Release:    1%{?dist}
 Summary:    OpenStack Magnum UI Horizon plugin
 License:    Apache-2.0
@@ -123,6 +123,9 @@ install -p -D -m 644 %{module}/enabled/_1372_project_container_infra_cluster_tem
 
 
 %changelog
+* Thu Sep 10 2026 RDO <dev@lists.rdoproject.org> 16.1.0-1
+- Update to 16.1.0
+
 * Wed Apr 02 2025 RDO <dev@lists.rdoproject.org> 16.0.0-1
 - Update to 16.0.0
 
